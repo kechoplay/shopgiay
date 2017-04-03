@@ -1,0 +1,94 @@
+#imagesp{
+	width: 200px;
+	float: left;
+	height: 200px;
+	margin-left: 45px;
+}
+#tieude{
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+#infosp{
+	margin-left: 30px;
+	width: 500px;
+	float: left;
+	height: 150px;
+}
+#info{
+	height: auto;
+}
+#name{
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: bold;
+	padding-top: 18px;
+}
+#nhanhieu{
+	padding-top: 5px;
+	font-size: 17px;
+}
+#gia{
+	padding-top: 5px;
+	font-size: 17px;
+}
+#danhgia{
+	float: left;
+	width: 100%;
+	padding-left: 20px;
+}
+.thumbnail {
+    width:50px;	
+    padding:0px;
+}
+.panel {
+    position: relative;
+    width: 675px;
+}
+.panel>.panel-heading:after,.panel>.panel-heading:before{
+	position:absolute;
+	top:11px;left:-16px;
+	right:100%;
+	width:0;
+	height:0;
+	display:block;
+	content:" ";
+	border-color:transparent;
+	border-style:solid solid outset;
+	pointer-events:none;
+}
+.panel>.panel-heading:after{
+	border-width:7px;
+	border-right-color:#f7f7f7;
+	margin-top:1px;
+	margin-left:2px;
+}
+.panel>.panel-heading:before{
+	border-right-color:#ddd;
+	border-width:8px;
+}
+.col-sm-5{
+	width: 705px;
+}
+.col-sm-12{
+	width: 838px;
+}
+.containers {
+	width: 838px;
+	margin-left: 0px;
+}
+#txtarea{
+	width: 100%;
+	float: left;
+}
+.panel-body form button {
+border: medium none;
+color: #fff;
+float: right;
+font-family: Lato;
+font-size: 14px;
+letter-spacing: 0.3px;
+margin-right: 9px;
+margin-top: 9px;
+padding: 6px 15px;
+}
