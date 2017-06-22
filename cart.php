@@ -8,7 +8,7 @@
 	}
 	function validate(e) {
 		if (
-			(e.keyCode >= 48 && e.keyCode <= 57 && !e.shiftKey) ||
+			(e.keyCode >= 96 && e.keyCode <= 105 && !e.shiftKey) ||
 			e.keyCode === 8
 			)
 		{

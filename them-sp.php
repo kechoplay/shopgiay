@@ -33,13 +33,18 @@ if(isset($_POST["submit_name"])){
 		$bao_loi = "Không được để trống trường nội dung nào!";
 	}
 
-	if($bao_loi){
+	if(isset($bao_loi)){
 		echo "<script>alert(\"$bao_loi\")</script>";
 		echo "<meta http-equiv=\"refresh\" content=\"0;url=admin.php\">";
 	}else{	
 		$new_image_path = "hinhanh/".$image_name;
 		$image_upload = move_uploaded_file($image_path, $new_image_path);
-
+		echo $new_image_path;
+		if($image_upload){
+			echo "thanh cong";
+		}else{
+			echo "thta bai";
+		}
 		$sql = "INSERT INTO product(pro_name,pro_price,pro_image,pro_description,gro_id) 
 		VALUES('$ten_sp', '$gia_sp', '$image_name', '$chitiet_sp', '$id_dm')";
 		$query = mysql_query($sql);

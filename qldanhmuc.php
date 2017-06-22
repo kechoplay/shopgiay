@@ -47,9 +47,9 @@
 if(isset($_POST['submit_update'])){
   $iddm=$_POST['groid'];
   $tendm=$_POST['groname'];
-  $query1=mysql_query("select * from progroup");
-  $fetch=mysql_fetch_array($query1);
-  if($fetch['gro_name']==$tendm){
+  $query1=mysql_query("select * from progroup where gro_name like'$tendm'");
+  if(mysql_num_rows($query1)>0){
+    echo "<meta http-equiv=\"refresh\" content=\"0\">";
     echo "<script>alert('Ten danh muc da ton tai')</script>";
   }else{
     $sql1="update progroup set gro_name='$tendm' where gro_id=$iddm";
@@ -67,6 +67,7 @@ if(isset($_POST['submit_xoadm'])){
   $iddm=$_POST['groid'];
   $query2=mysql_query("select * from product where gro_id=$iddm");
   if(mysql_num_rows($query2)>0){
+    echo "<meta http-equiv=\"refresh\" content=\"0\">";
     echo "<script>alert('Bạn không thể xóa danh mục này')</script>";
   }else{
     $sql="delete from progroup where gro_id=$iddm";
@@ -82,9 +83,9 @@ if(isset($_POST['submit_xoadm'])){
 
 if(isset($_POST['submit_add'])){
   $tendm=$_POST['groname'];
-  $query1=mysql_query("select * from progroup");
-  $fetch=mysql_fetch_array($query1);
-  if($fetch['gro_name']==$tendm){
+  $query1=mysql_query("select * from progroup where gro_name like'$tendm'");
+  if(mysql_num_rows($query1)>0){
+    echo "<meta http-equiv=\"refresh\" content=\"0\">";
     echo "<script>alert('Ten danh muc da ton tai')</script>";
   }else{
     $sql="insert into progroup(gro_name) values('$tendm')";

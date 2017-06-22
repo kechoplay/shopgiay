@@ -67,7 +67,7 @@ if(isset($_POST['submit_tt'])){
   $tt=$_POST['stt'];
   $thucthi=mysql_query("select * from orders where ord_id=$idhd");
   $in=mysql_fetch_array($thucthi);
-  if($in['ord_status']==1 || $in['ord_status']==2){
+  if($in['ord_status']==0 || $in['ord_status']==1){
     $query1=mysql_query("update orders set ord_status=$tt where ord_id=$idhd");
     if($query1){
       echo "<meta http-equiv=\"refresh\" content=\"0\">";
@@ -132,23 +132,23 @@ if(isset($_POST['submit_tt'])){
                   <td>
                     <select name="stt">
                       <?php
-                      if($row['ord_status']==1){
+                      if($row['ord_status']==0){
                         ?>
-                        <option selected="selected" value="1">Chưa xử lý</option>
-                        <option value="2">Đang xử lý</option>
-                        <option value="3">Đã xử lý</option>
+                        <option selected="selected" value="0">Chưa xử lý</option>
+                        <option value="1">Đang xử lý</option>
+                        <option value="2">Đã xử lý</option>
                         <?php
-                      }elseif ($row['ord_status']==2) {
+                      }elseif ($row['ord_status']==1) {
                         ?>
-                        <option value="1">Chưa xử lý</option>
-                        <option selected="selected" value="2">Đang xử lý</option>
-                        <option value="3">Đã xử lý</option>
+                        <option value="0">Chưa xử lý</option>
+                        <option selected="selected" value="1">Đang xử lý</option>
+                        <option value="2">Đã xử lý</option>
                         <?php
                       }else{
                         ?>
-                        <option value="1">Chưa xử lý</option>
-                        <option value="2">Đang xử lý</option>
-                        <option selected="selected" value="3">Đã xử lý</option>
+                        <option value="0">Chưa xử lý</option>
+                        <option value="1">Đang xử lý</option>
+                        <option selected="selected" value="2">Đã xử lý</option>
                         <?php
                       }
                       ?>

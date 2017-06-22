@@ -1,4 +1,5 @@
 <?php
+include('ketnoi.php');
 if(!isset($_GET['trang'])){
     $trang=1;
 }

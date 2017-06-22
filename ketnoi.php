@@ -13,4 +13,6 @@
         "{$ketnoi['Database']['dbname']}") 
     or
         die("Không thể chọn database");
+// $conn=mysql_connect('localhost','root','') or die('Khong the ket noi');
+// mysql_select_db('shopgiay');
 ?>

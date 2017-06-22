@@ -183,7 +183,7 @@ $set_lang=mysql_query("SET NAMES 'utf8'");
 									$list_trang .= "<b>$i </b>";
 								}
 								else{
-									$list_trang .= "<a href=".$_SERVER['PHP_SELF']."?trang=$i>".$i." </a>";
+									$list_trang .= "<a href=".$_SERVER['PHP_SELF']."?tukhoa=adidas&submit_tk=Search&trang=$i>".$i." </a>";
 								}
 							}
 							echo "<p id='num'>$list_trang</p>";
